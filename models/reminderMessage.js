@@ -1,3 +1,6 @@
+const Reminder = require('reminder');
+const remind = new Reminder();
+
 class ReminderMessage {
 
     /**
@@ -12,18 +15,27 @@ class ReminderMessage {
     // }
 // example model above
 
-    reminderInput(name){
-        return new Promise(
-            (resolve) => {
-                resolve("Simeron");
-            }
-        )
-    }
+//     reminderInput(name){
+//         return new Promise(
+//             (resolve) => {
+//                 resolve("Simeron");
+//             }
+//         )
+//     }
 
-    ReminderMessageInfo() {
-    let input = document.getElementById("userInput").value;
-    alert(input);
-}
+//     function ReminderMessageInfo() {
+//     let input = document.getElementById("userInput").value;
+//     alert(input);
+// }
+
+
+remind.every('5 minutes', function(date) {
+    console.log("Close the Twitter and start to work!");
+});
+
+remind.every('4 hours', function(date) {
+    console.log("It\'s time to eat something!");
+});
 
 }
 
