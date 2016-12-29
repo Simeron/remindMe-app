@@ -12,13 +12,18 @@ class ReminderMessage {
     // }
 // example model above
 
- reminderInput(){
-     return new Promise(
-         (resolve) => {
-             resolve("testname")
-         }
-     )
- }
+    reminderInput(name){
+        return new Promise(
+            (resolve) => {
+                resolve("Simeron");
+            }
+        )
+    }
+
+    ReminderMessageInfo() {
+    let input = document.getElementById("userInput").value;
+    alert(input);
+}
 
 }
 

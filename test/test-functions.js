@@ -32,8 +32,19 @@ describe("reminderMessageModel", () => {
     //     done();
     // });
 
-    it("should be store user input", (done) =>{
-        func.reminderInput().should.equal("reminder message");
-        done();
+    it("this is a test", (done) => {
+        func.reminderInput("Simeron")
+        .then(result => {
+            result.should.equal("Simeron");
+            done();
+        })
+    })
+
+    it("should hold user reminder input", (done) => {
+        func.ReminderMessageInfo("this is a test message")
+        .then(result => {
+            result.should.equal("this is a test message");
+            done();
+        })
     })
 })
