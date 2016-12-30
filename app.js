@@ -3,8 +3,6 @@ const bodyParser = require("body-parser");
 const routes = require("./routes/routes");
 const Reminder = require("reminder");
 
-
-
 const app = express();
 
 //View Engine
