@@ -1,4 +1,4 @@
-const FetchReminderInfo = require("../lib/reminderNPM");
+const FetchReminderInfo = require("../models/reminderMessage");
 // const FetchRepo = require("../lib/fetchRepos");
 // const FetchCommits = require("../lib/fetchCommits");
 
