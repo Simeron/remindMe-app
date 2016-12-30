@@ -1,5 +1,7 @@
 const Reminder = require('reminder');
-const remind = new Reminder();
+// const remind = new Reminder();
+const Flatpickr = require("flatpickr");
+new Flatpickr(element, config);
 
 class ReminderMessage {
 
@@ -29,13 +31,14 @@ class ReminderMessage {
 // }
 
 
-remind.every('5 minutes', function(date) {
-    console.log("Close the Twitter and start to work!");
-});
+// remind.every('5 minutes', function(date) {
+//     console.log("Close the Twitter and start to work!");
+// });
 
-remind.every('4 hours', function(date) {
-    console.log("It\'s time to eat something!");
-});
+// remind.every('4 hours', function(date) {
+//     console.log("It\'s time to eat something!");
+// });
+
 
 }
 

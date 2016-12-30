@@ -1,12 +1,3 @@
-// $(() => {
-//     function storeReminder() {
-    
-//     let input = $('#userInput').val();
-//     console.log(input);
-// }
-// });
-
-
-
-
-
+    flatpickr(".flatpickr", {
+	enableTime: true
+});

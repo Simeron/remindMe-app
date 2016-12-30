@@ -1,4 +1,4 @@
-const fetchReminderInfo = require("../models/reminderMessage");
+const FetchReminderInfo = require("../lib/reminderNPM");
 // const FetchRepo = require("../lib/fetchRepos");
 // const FetchCommits = require("../lib/fetchCommits");
 
@@ -9,15 +9,20 @@ class ShowController {
     * @param req,
     * @param res,
     */
-    static ReminderMessage(req, res) {
-        fetchReminderInfo.doFetchUsers()
+
+
+        static showReminder(req, res) {
+        FetchReminderInfo.doFetchInfo(req.body)
             .then(result => {
+                //console.log(result);
+                req.session.commits = result;
                 res.status(200).send({
-                    user: req.body.username,
+                    user: req.body,
                     result: result
                 });
             })
             .catch(err => {
+                console.log(err.message);
                 res.status(400).send(err);
             });
     }
